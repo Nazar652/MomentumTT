@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'admin_panel/css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Адмін панель</h1>
+    <div class="users-panel">
+        <h2 class="user-panel-heading">Users</h2>
+        <div class="users">
+
+        </div>
+    </div>
+    <div class="accounts-panel">
+        <h2 class="accounts-panel-heading">Accounts</h2>
+        <div class="accounts">
+
+        </div>
+    </div>
+    <div class="new-user">
+        <form class="new-user-form">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name"><br><br>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname"><br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="identifier">Identifier:</label>
+            <input type="text" id="identifier" name="identifier"><br><br>
+
+            <button id="create-user">Додати нового користувача</button>
+        </form>
+    </div>
+    <div class="new-account">
+        <form class="new-account-form">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number"><br><br>
+
+            <label for="user_identifier">User Identifier:</label>
+            <select id="user_identifier" name="user_identifier">
+
+            </select><br><br>
+            <button id="create-account">Додати новий акаунт</button>
+        </form>
+    </div>
+</div>
+<script src="{% static 'admin_panel/js/script.js' %}" type="module"></script>
+</body>
+</html>
